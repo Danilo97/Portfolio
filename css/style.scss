@@ -1,0 +1,484 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    scroll-behavior: smooth;  
+}
+body {
+    font-family:monospace;
+    
+    li{
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color:#FFF;
+    }
+    /*---- NAVIGACIJA ----*/
+    #nav {
+        height: 60px;
+        width:100%;
+        position: fixed;
+        top:0px;
+        background-color:#1A1A1C;
+        box-shadow: 1px 1px 8px #000;
+        z-index: 999;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap:wrap;
+            margin-top:1.4%;
+            li {
+                list-style-type: none;
+                margin-right:6%; 
+                a {
+                    font-weight: bold;
+                    font-size: 1.4em;
+                    transition: 0.1s;
+                    transition-timing-function: linear;
+ 
+                }
+                a:hover {
+                    border-bottom: 2px solid #FFF;
+                    padding-bottom:3px;
+                }
+            }
+        }
+
+    }
+    /*---- Main Div ----*/
+    #main {
+        background-image: url("../images/apple-black-and-white-desk-129208.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        .mainText {
+            color:#FFF;
+            padding:4%;
+            h1{
+                font-size: 3.2em;
+                margin-bottom: 2%; 
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 0.15em solid #FFF;
+                animation: 
+                    typing 3s steps(40, end),
+                    blink 0.5s step-end infinite;
+            }
+                    /* --- Efekat Kucanja --- */
+                    @keyframes typing {
+                        from { width: 0 }
+                        to { width: 100% }
+                    }
+                    
+                    /* --- Blinkovanje bordera --- */
+                    @keyframes blink {
+                        from, to { border-color: transparent }
+                        50% { border-color: #FFF}
+                    }
+            h2 {
+                font-size: 2em;
+                margin-bottom: 15%;
+                
+            }
+            .button {
+                      a{
+                        border:3px solid #fff;
+                        padding: 4%;
+                        font-size: 2em;
+                        border-radius: 8px;
+                        transition: 0.1s;
+                        transition-timing-function: linear;
+                    }
+                    i{
+                        font-size: 0.6em;
+                        overflow: hidden;
+                        visibility:hidden;
+                        
+                    }
+                    .button:hover i{
+                        position:relative;
+                        visibility: visible;
+	                    animation: bestimg 0.3s;
+                    }
+                    @keyframes bestimg {
+                        from { opacity: 0; left:-13px;  }
+                        to   { opacity: 1; left:0px;  }
+                    }
+
+            }
+            
+        
+        }
+    }
+    /*------SKILLS -------*/
+    #skills {
+        margin-top:5%;
+        h3 {
+            text-align: center;
+            display:inline-block;
+            width:100%;
+            font-size:2em;
+            padding-top:20px;
+            margin-bottom:70px;
+
+            .underline{
+                border-bottom:3px solid #000;
+                padding-bottom:10px;
+            }
+        }
+        .wrapper {
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .skill {
+            font-size: 1.6em;
+            display: flex;
+            justify-content: center;
+            margin-bottom:20px;
+            
+        }
+        .pieChart {
+            width: 200px;
+	        height: 200px;
+            border:4px solid #000;
+            border-radius:50%;
+            display:flex;
+            justify-content: center;
+            flex-direction:column;
+            align-items:center;
+            font-size: 0.9em;
+            
+            h4 {
+                z-index:2;
+            }
+        
+            /*---Animacija za pie chart (Kroz transition)---*/
+            .chart {
+                display:flex;
+                justify-content: center;
+                flex-direction:column;
+                align-items:center;
+                height:190px;
+                width:190px;
+                background-color: #A7A7A7;
+                -webkit-clip-path: circle(50.0% at 50% 50%);
+                clip-path: circle(50.0% at 50% 50%);
+                transition: 0.5s;
+            }
+            .chart:hover{
+                height: 120px;
+                width: 120px;
+                background-color: #A7A7A7;
+            }
+            .chart2{
+                height:180px;
+                width:180px;
+            }
+            .chart3{
+                height:170px;
+                width:170px;
+            }
+            .chart4{
+                height:150px;
+                width:150px;
+            }
+            h4{
+                margin-bottom:10px;
+            }
+            p{
+                font-weight: bold;
+                
+            }
+        }
+    }
+    /*---PROJECTS---*/
+    #projects {
+        
+        h3 {
+            text-align: center;
+            display:inline-block;
+            width:100%;
+            font-size:2em;
+            margin-bottom:70px;
+            padding-top:50px;
+        }
+        .underline{
+            border-bottom:3px solid #000;
+                padding-bottom:10px;
+        }
+        .wrapper {
+            display:flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .project {
+            width:40%;
+            padding:2%;
+            display: flex;
+            justify-content: space-around;
+
+            h4{
+                padding-bottom:20px;
+                font-size:1.4em;
+
+                label{
+                    border-bottom:2px solid #000;
+                    padding-bottom:5px;
+                }
+            }
+            p {
+                font-size: 1.2em; 
+                padding-top:15px;
+                padding-bottom:50px;  
+            }
+            a{
+                border:3px solid #000;
+                padding: 4%;
+                font-size: 1.3em;
+                border-radius: 8px;
+                white-space: nowrap;
+                background-color: #000;
+                transition: 0.15s;
+                transition-timing-function: linear; 
+            }
+            a:hover {
+                background-color: #4F5052;
+                border:3px solid #4F5052; 
+            }
+            .left {
+                margin-right:5%;
+                width:50%;
+                
+                
+            }
+            .right{
+                height: 300px;
+                background-color: #000;
+                width:50%;
+                border:1px solid none;
+                border-radius:2%;
+
+                figure{
+                    display:flex;
+                    justify-content: center;
+                    img{
+                        padding-top:60px;
+                        height:160px;
+                    }
+                }
+            }
+        }
+    }
+    /*--PROJECTS END--*/
+    /*--ABOUT ME--*/
+    #aboutMe{
+        h3{
+                text-align: center;
+                display:inline-block;
+                width:100%;
+                font-size:2em;
+                padding-top:20px;
+                margin:40px 0 70px 0;
+        }
+        
+            .wrapper{
+                display:flex;
+                justify-content: space-around;
+                .about{
+                    width:50%;
+                    text-align: center;
+                    figure{
+
+                        img{
+                            width:auto;
+                            border:1px none #000;
+                            border-radius: 2%;
+                            height: 400px;
+                        }
+                    }
+                }
+                .cv{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .textWrap {
+                        margin-top:20px;
+                        width:90%;
+                    
+                        p{
+                            font-size: 1.5em;
+                            line-height: 1.5em;
+                        }
+                    }
+                    a {
+                        height:40px;
+                        width:30%;
+                        font-size: 1.6em;
+                        padding-top:15px;
+                        margin-top:25px;
+                        color:#000;
+                        cursor:pointer;
+                        transition:0.3s;
+                        border: solid 2px #000;
+    
+                    }
+                    a:hover{
+                        background-color: #000;
+                        color:#fff;
+                    }
+                    #socials {
+                        display:flex;
+                        justify-content: space-around;
+                        
+                    }
+                    
+                }
+            }
+            
+            label{
+                border-bottom:2px solid #000;
+                padding-bottom:5px;
+            }
+    }
+    /*--ABOUT ME END--*/
+    /*--STRELICA ZA UP--*/
+    #up{
+        display:flex;
+        justify-content:flex-end;
+        margin:0 1% 3% 0;
+        i{
+            font-size: 40px;
+            color:lighten(#000, 30%);
+            margin-bottom:20px;
+            position: fixed;
+            bottom:0px
+        }
+        i:hover{
+            color:#A7A7A7;
+        }
+    }
+    /*--STRELICA ZA UP END--*/
+    /*--FOOTER--*/
+    footer{
+        height: 400px;
+        background-color:#000;
+        display: flex;
+        justify-content: space-around;
+
+        .usefulLinks {
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            ul{
+                font-size:1.4em;
+                line-height: 2em;
+                padding-top:60px;
+
+                li{
+                    a:hover{    
+                        color:#A7A7A7;
+                    }
+                }
+            }
+            #socials{
+                display:flex;
+                justify-content:space-evenly;
+                align-items: center;
+                width:20%;
+                margin-right:20px;
+                
+           
+            .fab {
+                color:#fff;
+                margin-top:10px;  
+                font-size:30px;
+                
+            }
+            .fab:hover{    
+                color:#A7A7A7;
+            }
+            }
+            
+        }
+        .footer{
+            width:45%;
+        }
+        h3 {
+            color:#fff;
+            text-align:center;
+            font-size:2em;
+            padding-top:20px;
+
+            label {
+                border-bottom:2px solid #fff;
+                padding-bottom:5px;
+            }
+        }
+        /*--FORMA--*/
+        
+        .form {
+            
+            form{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height:340px;
+            }
+            input{
+                font-size: 1em;
+                width: 85%;
+                box-sizing: border-box;
+                height: 50px;
+                padding: 0px 15px 0px 15px;
+                background: transparent;
+                outline: none;
+                color: #fff;  
+                border: solid 1px #fff;
+            }
+            input:focus{
+                transition:0.8s;
+                background-color:#1A1A1C; 
+            }
+            ::placeholder{
+                color: #A7A7A7;
+                font-family: monospace;
+                font-size: 1.3em;
+            }  
+            .text{
+                border-bottom:none;
+            }
+            #submit {
+                border-top:none;
+                cursor:pointer;
+                transition:0.7s;
+            }
+            #submit:hover{
+                background-color: #1A1A1C;
+            }
+            textarea{
+                width:85%;
+                box-sizing: border-box;
+                height: 110px;
+                resize:none;
+                padding: 10px 15px 0px 15px;
+                outline: none;
+                background: transparent;
+                color: #fff;  
+                border: solid 1px #fff;
+            }
+            textarea:focus{
+                transition:0.8s;
+                background-color:#1A1A1C; 
+            }
+        }
+    }
+}
