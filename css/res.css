@@ -130,3 +130,31 @@
     }
     
 }
+@media (max-width:480px){
+    /*--MAIN DIV--*/
+    .mainText h1 {
+        font-size: 2.5em !important;
+    }
+    .mainText h2 {
+        font-size: 1.3em !important;
+    }
+    /*--PROJECTS--*/
+    /*--ABOUT--*/
+    .about figure img{
+        height:250px !important;
+    }
+    .cv a {
+        padding-bottom:15px !important;
+    }
+    /*--FOOTER--*/
+    .fab {
+        margin-right:15px;    
+    }
+    #socials {
+        margin-left:35px;
+        margin-bottom:20px;
+    }
+    .footer h3 {
+        font-size: 1.5em !important;
+    }
+}
